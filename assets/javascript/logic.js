@@ -26,6 +26,10 @@ $(document).ready(function() {
           firstTrain: firstTrain,
           frequency: frequency
       });
+      $("#train-name").val("");
+      $("#destination").val("");
+      $("#first-time").val("");
+      $("#frequency").val("");
 		});
 		database.ref().on("child_added", function(childSnapshot){
 			var sv = childSnapshot.val();
@@ -37,7 +41,6 @@ $(document).ready(function() {
 	    var tRemainder = diffTime % sv.frequency;// Time apart (remainder)
 	    var tMinutesTillTrain = sv.frequency - tRemainder;// Minutes Until Train
 	    var nextTrain = moment().add(tMinutesTillTrain, "minutes");// Next Train
-	    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 			// Console.loging the last user input
       console.log(sv.train);
       console.log(sv.destination);
