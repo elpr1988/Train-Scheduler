@@ -1,0 +1,24 @@
+.jumbotron {
+	background-color: #5bc0de;
+}
+
+.jumbotron h1, .jumbotron p {
+	color: #ffffff;
+	text-align: center;
+}
+
+h2 {
+	color: #5bc0de;
+	font-weight: bold;
+}
+
+th {
+	color: #4895d1;
+}
+
+td {
+	color: #4895d1;
+}
+label {
+	color: #4895d1;
+}
